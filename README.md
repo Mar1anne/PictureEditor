@@ -1,0 +1,6 @@
+PictureEditor
+=============
+
+Seminarska
+
+- opis
