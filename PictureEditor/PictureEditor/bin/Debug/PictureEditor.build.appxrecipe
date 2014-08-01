@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DANCE1-PC</Machine>
+    <WindowsUser>dance1</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\PictureEditor.exe">
+      <PackagePath>PictureEditor.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\PictureEditor.pdb">
+      <PackagePath>PictureEditor.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.Filtering.WinRT\bin\Debug\ImageTools.Filtering.WinRT.dll">
+      <PackagePath>ImageTools.Filtering.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.IO.Bmp.WinRT\bin\Debug\ImageTools.IO.Bmp.WinRT.dll">
+      <PackagePath>ImageTools.IO.Bmp.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.IO.Gif.WinRT\bin\Debug\ImageTools.IO.Gif.WinRT.dll">
+      <PackagePath>ImageTools.IO.Gif.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.IO.Jpeg.WinRT\bin\Debug\ImageTools.IO.Jpeg.WinRT.dll">
+      <PackagePath>ImageTools.IO.Jpeg.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.Controls.WinRT\bin\Debug\ImageTools.IO.Png.WinRT.dll">
+      <PackagePath>ImageTools.IO.Png.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.Controls.WinRT\bin\Debug\ImageTools.Utils.WinRT.dll">
+      <PackagePath>ImageTools.Utils.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.Controls.WinRT\bin\Debug\ImageTools.WinRT.dll">
+      <PackagePath>ImageTools.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\packages\WriteableBitmapEx.1.0.12.0\lib\NetCore45\WriteableBitmapEx.WinRT.dll">
+      <PackagePath>WriteableBitmapEx.WinRT.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.Filtering.WinRT\bin\Debug\ImageTools.Filtering.WinRT.pdb">
+      <PackagePath>ImageTools.Filtering.WinRT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.IO.Bmp.WinRT\bin\Debug\ImageTools.IO.Bmp.WinRT.pdb">
+      <PackagePath>ImageTools.IO.Bmp.WinRT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.IO.Gif.WinRT\bin\Debug\ImageTools.IO.Gif.WinRT.pdb">
+      <PackagePath>ImageTools.IO.Gif.WinRT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.IO.Jpeg.WinRT\bin\Debug\ImageTools.IO.Jpeg.WinRT.pdb">
+      <PackagePath>ImageTools.IO.Jpeg.WinRT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.Controls.WinRT\bin\Debug\ImageTools.IO.Png.WinRT.pdb">
+      <PackagePath>ImageTools.IO.Png.WinRT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.Controls.WinRT\bin\Debug\ImageTools.Utils.WinRT.pdb">
+      <PackagePath>ImageTools.Utils.WinRT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.Controls.WinRT\bin\Debug\ImageTools.WinRT.pdb">
+      <PackagePath>ImageTools.WinRT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\packages\WriteableBitmapEx.1.0.12.0\lib\NetCore45\WriteableBitmapEx.WinRT.pdb">
+      <PackagePath>WriteableBitmapEx.WinRT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\All\imga_1.jpg">
+      <PackagePath>All\imga_1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\All\imga_2.jpg">
+      <PackagePath>All\imga_2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\All\imga_3.jpg">
+      <PackagePath>All\imga_3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\All\imga_4.jpg">
+      <PackagePath>All\imga_4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\All\imga_5.jpg">
+      <PackagePath>All\imga_5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\Pictures\Camera-icon.png">
+      <PackagePath>Pictures\Camera-icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\Pictures\photoLib.png">
+      <PackagePath>Pictures\photoLib.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\MainPage.xaml">
+      <PackagePath>MainPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\StartPage.xaml">
+      <PackagePath>StartPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

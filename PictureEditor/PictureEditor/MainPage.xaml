@@ -3,11 +3,98 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:PictureEditor"
+    xmlns:it="using:ImageTools.Controls" 
+    xmlns:itFilter="using:PictureEditor.Filtering"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    d:DataContext="local:MainPageViewModel"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+    <!--<Page.Resources>
+        <it:ImageConverter x:Key="ImageConverter"/>
+    </Page.Resources>-->
 
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="LayoutRoot" Background="Black">
+            <Image Name="testImage" HorizontalAlignment="Left" Height="380.333" Margin="114.369,28.641,0,0" VerticalAlignment="Top" Width="651.078" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto"  >
+
+            </Image>
+            <Button Name="openButton" Content="Open" HorizontalAlignment="Left" Margin="928,201,0,0" VerticalAlignment="Top"></Button>
+            <Button Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="969,303,0,0" VerticalAlignment="Top"/>
+            <Button Name="addFilterButton" Content="AddFilter" HorizontalAlignment="Left" Margin="774,530,0,0" VerticalAlignment="Top"/>
+
+
+
+            <!--<Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>-->
+
+            <!--<Border Margin="5" Grid.Row="0" Grid.Column="0">
+                <StackPanel>
+                    <it:ImageExt Source="{Binding ImageSource, Converter={StaticResource ImageConverter}}" />
+                    <TextBlock Text="Original image without a filter." />
+                </StackPanel>
+            </Border>
+            <Border Margin="5" Grid.Row="0" Grid.Column="1" >
+                <StackPanel>
+                    <it:ImageExt Source="{Binding ImageSource, Converter={StaticResource ImageConverter}}">
+                        <it:ImageExt.Filter>
+                            <itFilter:GrayscaleBT709 />
+                        </it:ImageExt.Filter>
+                    </it:ImageExt>
+                    <TextBlock Text="Grayscale filter." />
+                </StackPanel>
+            </Border>
+            <Border Margin="5" Grid.Row="0" Grid.Column="2">
+                <StackPanel>
+                    <it:ImageExt Source="{Binding ImageSource, Converter={StaticResource ImageConverter}}">
+                        <it:ImageExt.Filter>
+                            <itFilter:GaussianBlur Variance="2.8" />
+                        </it:ImageExt.Filter>
+                    </it:ImageExt>
+                    <TextBlock Text="Gaussian blur filter using a variance of 2.8." />
+                </StackPanel>
+            </Border>
+
+            <Border Margin="5"  Grid.Row="1" Grid.Column="0">
+            <StackPanel>
+                    <it:ImageExt Source="{Binding GifImageSource1, Converter={StaticResource ImageConverter}}">
+                </it:ImageExt>
+                <TextBlock Text="gif demo" />
+                </StackPanel>
+            </Border>
+
+            <Border Margin="5"  Grid.Row="1" Grid.Column="1">
+                <StackPanel>
+                    <it:ImageExt Source="{Binding NetworkImageSource, Converter={StaticResource ImageConverter}}">
+                        <it:ImageExt.Filter>
+                            <itFilter:Inverter />
+                        </it:ImageExt.Filter>
+                    </it:ImageExt>
+                    <TextBlock Text="Inverted colors." />
+                </StackPanel>
+            </Border>
+
+            <Border Margin="5" Grid.Row="1" Grid.Column="2" >
+                <GridView ItemsSource="{Binding Gifs}">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <it:ImageExt Source="{Binding GifImageSource, Converter={StaticResource ImageConverter}}" Stretch="Uniform"/>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                    <ItemsPanelTemplate>
+                        <WrapGrid Orientation="Horizontal"></WrapGrid>
+                    </ItemsPanelTemplate>
+                </GridView>
+            </Border>-->
+
+        </Grid>
     </Grid>
 </Page>
