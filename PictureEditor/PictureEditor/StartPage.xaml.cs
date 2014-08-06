@@ -86,6 +86,7 @@ namespace PictureEditor
             // Navigate to the appropriate destination page, configuring the new page
             // by passing required information as a navigation parameter
             var itemId = ((SampleDataItem)e.ClickedItem).UniqueId;
+            var uri=((SampleDataItem)e.ClickedItem).Title;
             //this.Frame.Navigate(typeof(MainPage), itemId);  
             //  String a=((SampleDataGroup)group).UniqueId;
             if ("Controls2".Equals(itemId))
@@ -97,7 +98,12 @@ namespace PictureEditor
             {
                 camera();
             }
+            else
+            {
+                (App.Current as App).uri = uri;
+                this.Frame.Navigate(typeof(MainPage),uri);
 
+            }
         }
 
         /*

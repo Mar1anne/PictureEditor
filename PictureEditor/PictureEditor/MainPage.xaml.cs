@@ -23,6 +23,8 @@ using Windows.Graphics.Imaging;
 using Windows.UI.Popups;
 using Windows.Storage.Streams;
 using System.Threading.Tasks;
+using System.Windows;
+using ImageTools.IO.Bmp;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -36,12 +38,14 @@ namespace PictureEditor
     {
         WriteableBitmap wb;
         WriteableBitmap a;
+        bool isFiltered;
         public MainPage()
         {
             this.InitializeComponent();
             openButton.Click += openButton_Click;
             addFilterButton.Click += addFilterButton_Click;
             saveButton.Click += saveButton_Click;
+            isFiltered = false;
           //  wb = BitmapFactory.New(1, 1);
         }
 
@@ -52,9 +56,94 @@ namespace PictureEditor
 
         void saveButton_Click(object sender, RoutedEventArgs e)
         {
-            openImage(wb);
-            //crop(wb);
+          
+          
+            
         }
+         async void saveEdit()
+        {
+            if (!isFiltered)
+            {
+                var destinationFolder = await KnownFolders.PicturesLibrary.CreateFolderAsync("MetroEditor", CreationCollisionOption.OpenIfExists);
+
+                string allImages = @"All";
+                StorageFolder InstallationFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+                // CreateFolderAsync("All", CreationCollisionOption.OpenIfExists);
+                StorageFolder all = await InstallationFolder.GetFolderAsync(allImages);
+                //  StorageFile file= (App.Current as App).editImage.B
+                //    Stream stream = new Stream("empty.bmp", FileMode.Create);
+                //   BitmapEncoder encoder = new BitmapEncoder
+
+                //encoder.Frames.Add(BitmapFrame.Create(image));
+                //MessageBox.Show(myPalette.Colors.Count.ToString());
+                //encoder.Save(stream);
+                StorageFile file = await destinationFolder.CreateFileAsync("image");
+                BmpEncoder encoder=new BmpEncoder();
+               // encoder.Encode(img, stream);
+               // BitmapEncoder en=await BitmapEncoder.CreateAsync(
+                
+                
+            }
+         }
+        
+   private async Task<StorageFile> WriteableBitmapToStorageFile(WriteableBitmap WB, string fileFormat)
+ 
+{
+ 
+    string FileName = "MyFile.";
+ 
+    Guid BitmapEncoderGuid = BitmapEncoder.JpegEncoderId;
+        FileName += "jpeg";
+ 
+            BitmapEncoderGuid = BitmapEncoder.JpegEncoderId;
+ 
+   
+ 
+ 
+ 
+    var file = await Windows.Storage.ApplicationData.Current.TemporaryFolder.CreateFileAsync(FileName, CreationCollisionOption.GenerateUniqueName);
+ 
+    using (IRandomAccessStream stream = await file.OpenAsync(FileAccessMode.ReadWrite))
+ 
+    {
+ 
+        BitmapEncoder encoder = await BitmapEncoder.CreateAsync(BitmapEncoderGuid, stream);
+
+        Stream pixelStream = WB.PixelBuffer as Stream;
+ 
+        byte[] pixels = new byte[pixelStream.Length];
+ 
+        await pixelStream.ReadAsync(pixels, 0, pixels.Length);
+ 
+ 
+ 
+        encoder.SetPixelData(BitmapPixelFormat.Bgra8, BitmapAlphaMode.Ignore,
+ 
+                            (uint)WB.PixelWidth,
+ 
+                            (uint)WB.PixelHeight,
+ 
+                            96.0,
+ 
+                            96.0,
+ 
+                            pixels);
+ 
+        await encoder.FlushAsync();
+ 
+    }
+ 
+    return file;
+ 
+}
+ 
+ 
+ 
+
+
+        
+
+
 
         void openButton_Click(object sender, RoutedEventArgs e)
         {
@@ -69,8 +158,16 @@ namespace PictureEditor
         async protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             this.DataContext = new MainPageViewModel();
-            // String a = e.Parameter as String;
-            testImage.Source = (Application.Current as App).editImage;
+             //String a = e.Parameter as String;
+            if (e.Parameter != null)
+            {
+                //Moze da se iskoristi i (Application.Current as App).editImage
+              //  BitmapImage bmp = new BitmapImage();
+                (Application.Current as App).editImage.UriSource = new Uri(e.Parameter as String);
+                testImage.Source = (Application.Current as App).editImage;
+            }
+            else
+                testImage.Source = (Application.Current as App).editImage;
             //  testImage.a
 
         }
@@ -135,7 +232,8 @@ namespace PictureEditor
 
                 BitmapImage b = new BitmapImage();
 
-
+                isFiltered = true;
+                (App.Current as App).editStream = await extImage.ToStream();
                 WriteableBitmap bitmap = extImage.ToBitmap();
                 testImage.Source = bitmap;
             }
