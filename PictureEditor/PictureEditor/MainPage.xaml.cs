@@ -62,29 +62,34 @@ namespace PictureEditor
         }
          async void saveEdit()
         {
-            if (!isFiltered)
-            {
-                var destinationFolder = await KnownFolders.PicturesLibrary.CreateFolderAsync("MetroEditor", CreationCollisionOption.OpenIfExists);
+            #region d
+            //if (!isFiltered)
+            //{
+            //    var destinationFolder = await KnownFolders.PicturesLibrary.CreateFolderAsync("MetroEditor", CreationCollisionOption.OpenIfExists);
 
-                string allImages = @"All";
-                StorageFolder InstallationFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
-                // CreateFolderAsync("All", CreationCollisionOption.OpenIfExists);
-                StorageFolder all = await InstallationFolder.GetFolderAsync(allImages);
-                //  StorageFile file= (App.Current as App).editImage.B
-                //    Stream stream = new Stream("empty.bmp", FileMode.Create);
-                //   BitmapEncoder encoder = new BitmapEncoder
+            //    string allImages = @"All";
+            //    StorageFolder InstallationFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+            //    // CreateFolderAsync("All", CreationCollisionOption.OpenIfExists);
+            //    StorageFolder all = await InstallationFolder.GetFolderAsync(allImages);
+            //    //  StorageFile file= (App.Current as App).editImage.B
+            //    //    Stream stream = new Stream("empty.bmp", FileMode.Create);
+            //    //   BitmapEncoder encoder = new BitmapEncoder
 
-                //encoder.Frames.Add(BitmapFrame.Create(image));
-                //MessageBox.Show(myPalette.Colors.Count.ToString());
-                //encoder.Save(stream);
-                StorageFile file = await destinationFolder.CreateFileAsync("image");
-                BmpEncoder encoder=new BmpEncoder();
-               // encoder.Encode(img, stream);
-               // BitmapEncoder en=await BitmapEncoder.CreateAsync(
-                
-                
-            }
-         }
+            //    //encoder.Frames.Add(BitmapFrame.Create(image));
+            //    //MessageBox.Show(myPalette.Colors.Count.ToString());
+            //    //encoder.Save(stream);
+            //    StorageFile file = await destinationFolder.CreateFileAsync("image");
+            //    BmpEncoder encoder=new BmpEncoder();
+            //   // encoder.Encode(img, stream);
+            //   // BitmapEncoder en=await BitmapEncoder.CreateAsync(
+
+
+            //}
+            #endregion
+
+            Task<StorageFile> task = WriteableBitmapToStorageFile((App.Current as App).writable, "da");
+            StorageFile file = await task;
+        }
         
    private async Task<StorageFile> WriteableBitmapToStorageFile(WriteableBitmap WB, string fileFormat)
  
@@ -95,13 +100,14 @@ namespace PictureEditor
     Guid BitmapEncoderGuid = BitmapEncoder.JpegEncoderId;
         FileName += "jpeg";
  
-            BitmapEncoderGuid = BitmapEncoder.JpegEncoderId;
- 
-   
- 
- 
- 
-    var file = await Windows.Storage.ApplicationData.Current.TemporaryFolder.CreateFileAsync(FileName, CreationCollisionOption.GenerateUniqueName);
+    BitmapEncoderGuid = BitmapEncoder.JpegEncoderId;
+
+
+
+
+     var file = await KnownFolders.PicturesLibrary.CreateFileAsync(FileName, CreationCollisionOption.GenerateUniqueName);
+
+   // var file = await Windows.Storage.ApplicationData.Current.TemporaryFolder.CreateFileAsync(FileName, CreationCollisionOption.GenerateUniqueName);
  
     using (IRandomAccessStream stream = await file.OpenAsync(FileAccessMode.ReadWrite))
  
@@ -138,11 +144,6 @@ namespace PictureEditor
 }
  
  
- 
-
-
-        
-
 
 
         void openButton_Click(object sender, RoutedEventArgs e)
@@ -233,13 +234,14 @@ namespace PictureEditor
                 BitmapImage b = new BitmapImage();
 
                 isFiltered = true;
-                (App.Current as App).editStream = await extImage.ToStream();
+                //(App.Current as App).editStream = await extImage.ToStream();
                 WriteableBitmap bitmap = extImage.ToBitmap();
+                //(App.Current as App).writable = extImage.ToBitmap();
                 testImage.Source = bitmap;
             }
             catch (Exception e)
             {
-                MessageDialog msg = new MessageDialog("Greska : " + e.Message);
+                MessageDialog msg = new MessageDialog("Greska vo Filter : " + e.Message);
                 msg.ShowAsync();
             }
 

@@ -22,11 +22,11 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\PictureEditor.exe">
       <PackagePath>PictureEditor.exe</PackagePath>
-      <Modified>2014-08-06T14:54:14.860</Modified>
+      <Modified>2014-08-06T15:47:23.265</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\PictureEditor.pdb">
       <PackagePath>PictureEditor.pdb</PackagePath>
-      <Modified>2014-08-06T14:54:14.839</Modified>
+      <Modified>2014-08-06T15:47:23.244</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.Filtering.WinRT\bin\Debug\ImageTools.Filtering.WinRT.dll">
       <PackagePath>ImageTools.Filtering.WinRT.dll</PackagePath>

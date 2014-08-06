@@ -37,6 +37,8 @@ namespace PictureEditor
         public BitmapImage editImage;
         public Stream editStream;
         public string uri;
+        public WriteableBitmap writable;
+
         public App()
         {
             this.InitializeComponent();

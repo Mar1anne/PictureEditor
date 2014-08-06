@@ -155,7 +155,7 @@ namespace PictureEditor
                 try
                 {
                     var stream = await file.OpenAsync(Windows.Storage.FileAccessMode.Read);
-                    // BitmapImage image = new BitmapImage();
+                     BitmapImage image = new BitmapImage();
                     //editImage.SetSource(stream);
                     (Application.Current as App).editStream = stream.AsStream();
                     (Application.Current as App).editImage.SetSource(stream);
