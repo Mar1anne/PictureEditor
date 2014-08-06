@@ -53,11 +53,10 @@ C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\D
 C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\ImageTools.IO.Png.WinRT.pri.xml
 C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\ImageTools.Utils.WinRT.pri.xml
 C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\ImageTools.WinRT.pri.xml
-C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\priconfig.xml.intermediate
-C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\layout.resfiles.intermediate
-C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\resources.resfiles.intermediate
-C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\pri.resfiles.intermediate
 C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\WriteableBitmapEx.WinRT.dll
 C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\WriteableBitmapEx.WinRT.pdb
 C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\WriteableBitmapEx.WinRT.xml
 C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\PictureEditor.csprojResolveAssemblyReference.cache
+C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\BrightnessFlyout.g.i.cs
+C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\BrightnessFlyout.g.cs
+C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\obj\Debug\BrightnessFlyout.xaml

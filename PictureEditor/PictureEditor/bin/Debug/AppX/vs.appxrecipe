@@ -16,17 +16,17 @@
     <AppXManifest Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-08-06T14:54:17.975</Modified>
+      <Modified>2014-08-06T19:47:44.946</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\PictureEditor.exe">
       <PackagePath>PictureEditor.exe</PackagePath>
-      <Modified>2014-08-06T15:47:23.265</Modified>
+      <Modified>2014-08-06T19:53:33.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\PictureEditor.pdb">
       <PackagePath>PictureEditor.pdb</PackagePath>
-      <Modified>2014-08-06T15:47:23.244</Modified>
+      <Modified>2014-08-06T19:53:33.946</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dance1\Downloads\Probno\imagetoolswinrt-18093\ImageTools\ImageTools.Filtering.WinRT\bin\Debug\ImageTools.Filtering.WinRT.dll">
       <PackagePath>ImageTools.Filtering.WinRT.dll</PackagePath>
@@ -148,13 +148,17 @@
       <PackagePath>App.xaml</PackagePath>
       <Modified>2014-07-22T22:01:12.221</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\BrightnessFlyout.xaml">
+      <PackagePath>BrightnessFlyout.xaml</PackagePath>
+      <Modified>2014-08-06T19:39:24.616</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
       <Modified>2014-07-22T22:01:12.231</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\MainPage.xaml">
       <PackagePath>MainPage.xaml</PackagePath>
-      <Modified>2014-08-01T16:19:29.836</Modified>
+      <Modified>2014-08-06T19:47:25.202</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\StartPage.xaml">
       <PackagePath>StartPage.xaml</PackagePath>
@@ -162,7 +166,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-08-01T16:29:43.804</Modified>
+      <Modified>2014-08-06T19:47:43.390</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

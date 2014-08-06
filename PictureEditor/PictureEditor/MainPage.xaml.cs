@@ -25,6 +25,7 @@ using Windows.Storage.Streams;
 using System.Threading.Tasks;
 using System.Windows;
 using ImageTools.IO.Bmp;
+using Windows.UI.Xaml.Media.Animation;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
@@ -304,6 +305,72 @@ namespace PictureEditor
         //    //    msg.ShowAsync();
         //    //}
         //}
+
+        public static Popup ShowPopup(FrameworkElement source, UserControl control, double width, double height)
+        {
+            Popup flyout = new Popup();
+
+            var windowBounds = Window.Current.Bounds;
+            var rootVisual = Window.Current.Content;
+
+            GeneralTransform gt = source.TransformToVisual(rootVisual);
+
+            var absolutePosition = gt.TransformPoint(new Point(0, 0));
+
+            control.Measure(new Size(Double.PositiveInfinity, double.PositiveInfinity));
+
+            // flyout.VerticalOffset = absolutePosition.Y - control.Height - 10;
+            flyout.VerticalOffset = absolutePosition.Y - height - 10;
+            //  flyout.HorizontalOffset = (absolutePosition.X + source.ActualWidth / 2) - control.Width / 2;
+            flyout.HorizontalOffset = (absolutePosition.X + source.ActualWidth / 2) - width / 2;
+            // flyout.HorizontalOffset = (absolutePosition.X + source.ActualWidth / 2) - 100;
+            flyout.IsLightDismissEnabled = true;
+
+            flyout.Child = control;
+            var transitions = new TransitionCollection();
+            transitions.Add(new PopupThemeTransition() { FromHorizontalOffset = 0, FromVerticalOffset = 100 });
+            flyout.ChildTransitions = transitions;
+            flyout.IsOpen = true;
+
+            return flyout;
+        }
+
+
+        private void addBrighnessButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            BrightnessFlyout bf = new BrightnessFlyout();
+            Popup a = ShowPopup(sender as FrameworkElement, bf,400,100);
+            filterBrightness((App.Current as App).editStream, bf.BrightnessLevel);
+
+        }
+
+        async public void filterBrightness(Stream stream ,int level)
+        {
+            try
+            {
+                IImageFilter filter = new Brightness(level);
+
+                //  Stream stream;
+                ExtendedImage myImage = new ExtendedImage();
+                await myImage.SetSource(stream);
+                ExtendedImage extImage = ExtendedImage.ApplyFilters(myImage, filter);
+
+                BitmapImage b = new BitmapImage();
+
+                isFiltered = true;
+                //(App.Current as App).editStream = await extImage.ToStream();
+                WriteableBitmap bitmap = extImage.ToBitmap();
+                //(App.Current as App).writable = extImage.ToBitmap();
+                testImage.Source = bitmap;
+            }
+            catch (Exception e)
+            {
+                MessageDialog msg = new MessageDialog("Greska vo Filter : " + e.Message);
+                msg.ShowAsync();
+            }
+
+        }
 
     }
 }

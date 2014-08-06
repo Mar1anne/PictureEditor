@@ -110,6 +110,9 @@
     <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\App.xaml">
       <PackagePath>App.xaml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\BrightnessFlyout.xaml">
+      <PackagePath>BrightnessFlyout.xaml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\dance1\Documents\GitHub\PictureEditor\PictureEditor\PictureEditor\bin\Debug\Common\StandardStyles.xaml">
       <PackagePath>Common\StandardStyles.xaml</PackagePath>
     </AppxPackagedFile>

@@ -112,11 +112,13 @@ namespace PictureEditor.PictureEditor_XamlTypeInfo
             }
         }
 
-        private object Activate_0_MainPage() { return new global::PictureEditor.MainPage(); }
+        private object Activate_0_BrightnessFlyout() { return new global::PictureEditor.BrightnessFlyout(); }
 
-        private object Activate_1_LayoutAwarePage() { return new global::PictureEditor.Common.LayoutAwarePage(); }
+        private object Activate_1_MainPage() { return new global::PictureEditor.MainPage(); }
 
-        private object Activate_2_StartPage() { return new global::PictureEditor.StartPage(); }
+        private object Activate_2_LayoutAwarePage() { return new global::PictureEditor.Common.LayoutAwarePage(); }
+
+        private object Activate_3_StartPage() { return new global::PictureEditor.StartPage(); }
 
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(string typeName)
@@ -126,29 +128,35 @@ namespace PictureEditor.PictureEditor_XamlTypeInfo
 
             switch (typeName)
             {
-            case "Windows.UI.Xaml.Controls.Page":
-                xamlType = new global::PictureEditor.PictureEditor_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.Page));
-                break;
-
             case "Windows.UI.Xaml.Controls.UserControl":
                 xamlType = new global::PictureEditor.PictureEditor_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.UserControl));
                 break;
 
+            case "Windows.UI.Xaml.Controls.Page":
+                xamlType = new global::PictureEditor.PictureEditor_XamlTypeInfo.XamlSystemBaseType(typeName, typeof(global::Windows.UI.Xaml.Controls.Page));
+                break;
+
+            case "PictureEditor.BrightnessFlyout":
+                userType = new global::PictureEditor.PictureEditor_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::PictureEditor.BrightnessFlyout), GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_0_BrightnessFlyout;
+                xamlType = userType;
+                break;
+
             case "PictureEditor.MainPage":
                 userType = new global::PictureEditor.PictureEditor_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::PictureEditor.MainPage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_1_MainPage;
                 xamlType = userType;
                 break;
 
             case "PictureEditor.Common.LayoutAwarePage":
                 userType = new global::PictureEditor.PictureEditor_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::PictureEditor.Common.LayoutAwarePage), GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_1_LayoutAwarePage;
+                userType.Activator = Activate_2_LayoutAwarePage;
                 xamlType = userType;
                 break;
 
             case "PictureEditor.StartPage":
                 userType = new global::PictureEditor.PictureEditor_XamlTypeInfo.XamlUserType(this, typeName, typeof(global::PictureEditor.StartPage), GetXamlTypeByName("PictureEditor.Common.LayoutAwarePage"));
-                userType.Activator = Activate_2_StartPage;
+                userType.Activator = Activate_3_StartPage;
                 xamlType = userType;
                 break;
 

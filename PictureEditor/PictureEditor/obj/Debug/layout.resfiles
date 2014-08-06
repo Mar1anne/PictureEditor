@@ -8,6 +8,7 @@ Assets\SmallLogo.png
 Assets\SplashScreen.png
 Assets\StoreLogo.png
 App.xaml
+BrightnessFlyout.xaml
 Common\StandardStyles.xaml
 MainPage.xaml
 StartPage.xaml

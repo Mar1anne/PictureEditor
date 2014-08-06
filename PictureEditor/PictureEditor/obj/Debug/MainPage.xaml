@@ -22,6 +22,7 @@
             <Button Name="openButton" Content="Open" HorizontalAlignment="Left" Margin="928,201,0,0" VerticalAlignment="Top"></Button>
             <Button Name="saveButton" Content="Save" HorizontalAlignment="Left" Margin="969,303,0,0" VerticalAlignment="Top"/>
             <Button Name="addFilterButton" Content="AddFilter" HorizontalAlignment="Left" Margin="774,530,0,0" VerticalAlignment="Top"/>
+            <Button x:ConnectionId='1' Name="addBrighnessButton" Content="AddBrightness" HorizontalAlignment="Left" Margin="432,705,0,0" VerticalAlignment="Top"                                 />
 
 
 
