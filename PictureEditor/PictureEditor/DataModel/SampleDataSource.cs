@@ -311,11 +311,7 @@ namespace PictureEditor.Data
                     "Item Description: Pellentesque porta, mauris quis interdum vehicula, urna sapien ultrices velit, nec venenatis dui odio in augue. Cras posuere, enim a cursus convallis, neque turpis malesuada erat, ut adipiscing neque tortor ac erat.",
                     ITEM_CONTENT,
                     group2));
-            //Iskomentiraj gi slednite dve linii i kje proraboti , ama i ova kje probam da go napravam
-            //  Koga kje go kliknes kopceto AddFilter se dodava filterot i taka raboti 
-            //Task<SampleDataGroup> g = readFolder();
-            //SampleDataGroup res = await g;
-            //this.AllGroups.Add(res);
+            
             readFolder();
 
 
@@ -332,12 +328,19 @@ namespace PictureEditor.Data
                    "",
                    "Assets/LightGray.png",
                    "Group Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor scelerisque lorem in vehicula. Aliquam tincidunt, lacus ut sagittis tristique, turpis massa volutpat augue, eu rutrum ligula ante a ante");
-            Task<List<String>> result = read();
-            List<String> res = await result;
+            //Task<List<String>> result = read();
+            //List<String> res = await result;
+            Task<List<FileDateCreated>> result = readMe();
+            List<FileDateCreated> res = await result;
 
-            foreach (var title in res)
+            //foreach (var title in res)
+            //{
+            //    addImage(title, title, group2);
+            //}
+
+            for (int i = 0; i < 5; i++)
             {
-                addImage(title, title, group2);
+                addImage(res[i].path, res[i].path, group2);
             }
             this.AllGroups.Add(group2);
             //  return group2;
@@ -357,12 +360,43 @@ namespace PictureEditor.Data
             //IReadOnlyList<StorageFile> fileList2 = await localFolder.GetFilesAsync();
             IReadOnlyList<StorageFile> fileList = await all.GetFilesAsync();
             List<String> titless = new List<string>();
+            List<FileDateCreated> lista = new List<FileDateCreated>();
             if (titless != null)
                 foreach (var file in fileList)
                 {
                     titless.Add(all.Path + "/" + file.Name);
+                    lista.Add(new FileDateCreated(all.Path + "/" + file.Name,file.DateCreated));
+
                 }
             return titless;
+            lista.OrderBy(x => x.date);
+
+
+        }
+
+        public async Task<List<FileDateCreated>> readMe()
+        {
+
+
+            string allImages = @"All";
+            StorageFolder InstallationFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+            StorageFolder all = await InstallationFolder.GetFolderAsync(allImages);
+
+            // IReadOnlyList<StorageFile> fileList = await myFolder.GetFilesAsync();
+            //IReadOnlyList<StorageFile> fileList2 = await localFolder.GetFilesAsync();
+            IReadOnlyList<StorageFile> fileList = await all.GetFilesAsync();
+            List<String> titless = new List<string>();
+            List<FileDateCreated> lista = new List<FileDateCreated>();
+            if (titless != null)
+                foreach (var file in fileList)
+                {
+                   // titless.Add(all.Path + "/" + file.Name);
+                    lista.Add(new FileDateCreated(all.Path + "/" + file.Name, file.DateCreated));
+
+                }
+           // return titless;
+            lista.OrderBy(x => x.date);
+            return lista;
 
 
         }
